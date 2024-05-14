@@ -1,0 +1,21 @@
+<!-- myapp/templates/myapp/patient_entry.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kalulator_sredniej Edit</title>
+</head>
+<body>
+    <h2>kalulator_sredniej Edit</h2>
+    <form method="post" action="{% url 'process_kalulator_sredniej' %}">
+        {% csrf_token %}
+        <label for="nazwa_przedmiotu">nazwa_przedmiotu:</label>
+        <input type="text" name="nazwa_przedmiotu" required>
+        <br>
+        <label for="lista_ocen">lista_ocen:</label>
+        <input type="text" name="lista_ocen" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
