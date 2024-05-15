@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteka Edit</title>
+</head>
+<body>
+    <h2>Biblioteka Edit</h2>
+    <form method="post" action="{% url 'process_biblioteka' %}">
+        {% csrf_token %}
+        <label for="book_name">Book name:</label>
+        <input type="text" name="book_name" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>

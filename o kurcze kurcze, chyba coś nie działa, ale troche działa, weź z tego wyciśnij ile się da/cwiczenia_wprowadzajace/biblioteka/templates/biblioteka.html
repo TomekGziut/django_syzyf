@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteka</title>
+</head>
+<body>
+    <h2>Biblioteka</h2>
+    {% if biblioteka %}
+        <ul>
+            {% for x in biblioteka %}
+                <li><a href="/biblioteka/{{ x.book_id }}/details">{{ x.book_name }}</a></li>
+                <li>{{ x.borrow_date }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You have no Książkas</p>
+    {% endif %}
+
+    <button onclick="location.href='/biblioteka/edit3'" type="button">Add New Ksiażka</button>
+</body>
+</html>
